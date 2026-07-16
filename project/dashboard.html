@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Marvin Mugume">
+  <title>MEX GAMING ARENA - Dashboard</title>
+  <link rel="stylesheet" href="styles/mobile.css" />
+  <link rel="stylesheet" href="styles/desktop.css" media="(min-width: 768px)" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet" />
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">MEX GAMING ARENA</div>
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="tournaments.html" class="nav-link">Tournaments</a>
+      <a href="players.html" class="nav-link">Players</a>
+      <a href="connect.html" class="nav-link">Connect</a>
+      <a href="dashboard.html" class="nav-link active">Dashboard</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section dashboard-hero">
+      <div class="hero-content">
+        <h1 id="welcome-message">Welcome, Gamer!</h1>
+        <p>Your arena profile is ready. Letâ€™s dominate.</p>
+      </div>
+    </section>
+
+    <section class="content-section profile-section">
+      <div class="card profile-card">
+        <h2>Profile Overview</h2>
+        <div id="avatar-preview" style="margin-bottom: 15px;"></div>
+        <p><strong>Username:</strong> <span id="profile-username">Loading...</span></p>
+        <p><strong>Email:</strong> <span id="profile-email">Loading...</span></p>
+        <p><strong>Favorite Game:</strong> <span id="profile-game">Loading...</span></p>
+        <p><strong>Member Since:</strong> <span id="profile-date">Loading...</span></p>
+      </div>
+    </section>
+
+    <section class="content-section recent-matches">
+      <h2>Recent Matches</h2>
+      <div id="match-feed" class="card-grid"></div>
+    </section>
+
+    <section class="content-section leaderboard-widget">
+      <h2>Leaderboard Highlights</h2>
+      <div class="leaderboard-table-container">
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Player</th>
+              <th>Game</th>
+              <th>Wins</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboard-widget-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="current-year"></span> MEX GAMING ARENA. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

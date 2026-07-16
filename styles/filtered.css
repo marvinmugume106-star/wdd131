@@ -1,0 +1,305 @@
+:root {
+    --primary-color: #4b0082;
+    /* Indigo */
+    --secondary-color: #8a2be2;
+    /* BlueViolet */
+    --accent1-color: #ffc0cb;
+    /* Pink */
+    --accent2-color: #f0f8ff;
+    /* AliceBlue */
+    --heading-font: 'Roboto', sans-serif;
+    --paragraph-font: 'Roboto', sans-serif;
+    --max-content-width: 1200px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--accent2-color);
+    color: #111;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Large navbar hidden by default on small screens */
+.navbar-large {
+    display: none;
+}
+
+/* Make the filter button bar sticky at the top */
+.navbar-large {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--primary-color);
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 8px rgba(76, 0, 130, 0.08);
+}
+
+/* Mobile menu button */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    margin: 0.5rem 0.5rem 0 0.5rem;
+    z-index: 200;
+}
+
+.menu-toggle:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.25);
+    border-radius: 6px;
+}
+
+.menu-toggle .bar {
+    height: 4px;
+    width: 28px;
+    background: #fff;
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Mobile nav: hidden by default */
+.navbar-mobile {
+    display: none;
+    flex-direction: column;
+    background: var(--primary-color);
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 150;
+}
+
+.navbar-mobile.active {
+    display: flex;
+}
+
+.navbar-mobile a,
+.navbar-large a {
+    color: white;
+    text-decoration: none;
+    padding: 0.85rem 1rem;
+    display: block;
+    text-align: center;
+}
+
+.navbar-mobile a:focus,
+.navbar-large a:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.25);
+    border-radius: 6px;
+}
+
+.navbar-large a {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    margin-left: 0.5rem;
+}
+
+/* Main */
+main {
+    flex: 1;
+    text-align: center;
+    padding: 2rem 1rem;
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin: 0.25rem 0;
+}
+
+/* Grid layout (mobile: stacked) */
+.temple-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+    padding: 0 0.5rem;
+}
+
+/* Each figure */
+figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+figure:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.temple-meta {
+    font-size: 0.875rem;
+    color: #333;
+    padding: 0 0 0.75rem 0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0.35rem 0;
+}
+
+/* Utility - hidden for screen readers only if needed */
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* Small tweaks for strong focus states */
+a:focus,
+button:focus {
+    outline: 3px solid rgba(75, 0, 130, 0.25);
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+/* Make filter buttons smaller and tidy */
+.filter-btn,
+.navbar-large button {
+    background: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 0.2rem 0.3rem;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(76, 0, 130, 0.08);
+    transition: background 0.2s, color 0.2s, transform 0.1s;
+    outline: none;
+}
+
+.filter-btn:hover,
+.filter-btn:focus,
+.navbar-large button:hover,
+.navbar-large button:focus {
+    background: var(--accent1-color);
+    color: var(--primary-color);
+    transform: translateY(-1px) scale(1.03);
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.filter-btn[aria-pressed="true"] {
+    background: var(--primary-color);
+    color: #fff;
+    border: 2px solid var(--accent1-color);
+    box-shadow: 0 2px 8px rgba(76, 0, 130, 0.12);
+}
+
+@media (min-width: 800px) {
+    .menu-toggle {
+        display: none !important;
+    }
+
+    .navbar-mobile {
+        display: none !important;
+    }
+}
+
+/* These styles are for the buttons. I have added .filter-link to them */
+.filter-btn,
+.navbar-large button,
+.filter-link,
+.navbar-large a {
+    background: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 0.2rem 0.3rem;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(76, 0, 130, 0.08);
+    transition: background 0.2s, color 0.2s, transform 0.1s;
+    outline: none;
+    text-decoration: none;
+    /* Added this to remove the underline */
+    display: inline-block;
+}
+
+/* Updated this section to include .filter-link */
+.filter-link:hover,
+.filter-link:focus,
+.navbar-large a:hover,
+.navbar-large a:focus {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}

@@ -1,0 +1,46 @@
+@media (min-width: 768px) {
+    header {
+        justify-content: flex-start;
+    }
+
+    .logo {
+        margin-right: 2rem;
+    }
+
+    .navbar-large {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .navbar-large a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+    }
+
+    .navbar-large a:hover {
+        color: var(--accent1-color);
+    }
+
+    .menu-toggle,
+    .navbar-mobile {
+        display: none;
+    }
+
+    main {
+        padding: 2rem 3rem;
+    }
+
+    .temple-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    figure {
+        max-width: none;
+    }
+}

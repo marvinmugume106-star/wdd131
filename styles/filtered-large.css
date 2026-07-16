@@ -1,0 +1,93 @@
+/* DESKTOP STYLES FOR FILTERED TEMPLES */
+
+@media (min-width: 800px) {
+    body {
+        font-size: 1.08rem;
+    }
+
+    header {
+        padding: 2rem 0;
+        position: static;
+        top: unset;
+        z-index: unset;
+    }
+
+    .logo {
+        font-size: 2rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .navbar-large {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        /* Align buttons to the left */
+        background: var(--primary-color);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        padding: 0.5rem 0 0.5rem 1rem;
+        /* Add left padding for spacing */
+        box-shadow: 0 2px 8px rgba(76, 0, 130, 0.08);
+    }
+
+    .filter-btn {
+        display: inline-block;
+        background: var(--secondary-color);
+        color: #fff;
+        border: none;
+        border-radius: 14px;
+        padding: 0.32rem 0.8rem;
+        font-size: 0.93rem;
+        margin: 0.15rem 0.2rem;
+        cursor: pointer;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2.5rem 2rem;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .temple-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.2rem;
+        margin-top: 2.5rem;
+        align-items: stretch;
+        justify-items: center;
+    }
+
+    figure {
+        max-width: 370px;
+        padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+        border-radius: 14px;
+    }
+
+    figcaption {
+        font-size: 1.13rem;
+        padding: 1rem 1rem 0.5rem 1rem;
+    }
+
+    .temple-meta {
+        font-size: 1rem;
+        padding: 0 1.2rem 1rem 1.2rem;
+    }
+
+    footer {
+        font-size: 1.08rem;
+        padding: 2rem 0;
+    }
+
+    .menu-toggle {
+        display: none !important;
+    }
+}

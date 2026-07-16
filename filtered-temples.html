@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Temple album assignment" />
+    <meta name="author" content="Marvin Mugume" />
+    <title>Temple Album</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/filtered.css">
+    <link rel="stylesheet" href="styles/filtered-large.css">
+
+    <script src="scripts/filtered.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo">Temple Album</div>
+
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="mobile-nav">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+        <nav class="navbar-large" aria-label="Primary">
+            <a href="#" data-filter="all" class="filter-link">Home</a>
+            <a href="#" data-filter="old" class="filter-link">Old</a>
+            <a href="#" data-filter="new" class="filter-link">New</a>
+            <a href="#" data-filter="large" class="filter-link">Large</a>
+            <a href="#" data-filter="small" class="filter-link">Small</a>
+        </nav>
+        <nav class="navbar-mobile" id="mobile-nav" aria-label="Mobile navigation">
+            <a href="#" data-filter="all" class="filter-link">Home</a>
+            <a href="#" data-filter="old" class="filter-link">Old</a>
+            <a href="#" data-filter="new" class="filter-link">New</a>
+            <a href="#" data-filter="large" class="filter-link">Large</a>
+            <a href="#" data-filter="small" class="filter-link">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>TEMPLE</h1>
+        <h2>Temple Gallery</h2>
+
+        <div class="temple-grid" id="templeGrid" aria-live="polite">
+        </div>
+
+        <noscript>
+            <p>Please enable JavaScript to view the interactive gallery.</p>
+        </noscript>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> ðŸŒ¸ Marvin Mugume ðŸŒ¸ Uganda</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>

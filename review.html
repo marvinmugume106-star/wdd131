@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+
+    <meta name="author" content="Marvin Mugume"> 
+    <meta name="description" content="Product review confirmation page for WDD 131 assignment.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <script src="scripts/review.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <div class="confirmation-box">
+            <h2>âœ… Review Submitted!</h2>
+            <p>Thank you for taking the time to share your feedback. Your review has been successfully submitted.</p>
+            
+            <p>This is your <span id="reviewCountDisplay" class="review-count">0</span> review submitted using this browser.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;2025 ðŸŒ¸ Marvin MugumeðŸŒ¸</p>
+        <p>Madagascar</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        // Set the last modified date in the footer
+        document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleDateString('en-US', {
+            month: '2-digit',
+            day: '2-digit',
+            year: 'numeric'
+        }) + ' ' + new Date(document.lastModified).toLocaleTimeString('en-US', {
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false
+        });
+    </script>
+</body>
+</html>

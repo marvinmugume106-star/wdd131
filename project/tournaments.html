@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marvin Mugume">
+    <title>MEX GAMING ARENA - Tournaments</title>
+    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet" href="styles/desktop.css" media="(min-width: 768px)">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MEX GAMING ARENA</div>
+        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="tournaments.html" class="nav-link active">Tournaments</a> <a href="players.html" class="nav-link">Players</a>
+            <a href="connect.html" class="nav-link">Connect</a>
+            <a href="login.html" class="nav-link"> Login</a>
+            <a href="register.html" class="nav-link">Register</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section tournaments-hero">
+            <div class="hero-content">
+                <h1>JOIN THE ACTION.</h1>
+                <p>Find the right competition to test your skills and claim your prize.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-live">LIVE MATCHES</a>
+                    <a href="#" class="btn btn-join">VIEW ALL BRACKETS</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section tournament-listings">
+            <h2>ACTIVE TOURNAMENTS</h2>
+            <div class="card-grid">
+                <div class="card tournament-card active-card">
+                    <img src="images/rocket-league.svg" alt="Rocket League" class="game-logo" loading="lazy">
+                    <h3>Rocket League: Winter Cup</h3>
+                    <p class="status">LIVE: Finals in 30 mins</p>
+                    <div class="stats">
+                        <span>$5K PRIZE</span> | <span>64 Teams</span>
+                    </div>
+                    <a href="#" class="card-link">WATCH NOW</a>
+                </div>
+                <div class="card tournament-card active-card">
+                    <img src="images/apex-legends.svg" alt="Apex Legends" class="game-logo" loading="lazy">
+                    <h3>Apex Legends: Solo Grind</h3>
+                    <p class="status">Round 4 in progress</p>
+                    <div class="stats">
+                        <span>$2K PRIZE</span> | <span>80 Players</span>
+                    </div>
+                    <a href="players.html" class="card-link">VIEW LEADERBOARD</a>
+                </div>
+                <div class="card tournament-card active-card">
+                    <img src="images/valorant.svg" alt="Valorant" class="game-logo" loading="lazy">
+                    <h3>Valorant: Regional Rumble</h3>
+                    <p class="status">Semifinals start in 2 hours</p>
+                    <div class="stats">
+                        <span>$8K PRIZE</span> | <span>32 Teams</span>
+                    </div>
+                    <a href="#" class="card-link">VIEW BRACKET</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section tournament-listings">
+            <h2>UPCOMING TOURNAMENTS</h2>
+            <div class="card-grid">
+                <div class="card tournament-card upcoming-card">
+                    <img src="images/trophy1.svg" alt="CS2" class="game-logo" loading="lazy">
+                    <h3>CS2: Community Clash</h3>
+                    <p class="status">Registration Closes: Oct 20th</p>
+                    <div class="stats">
+                        <span>$10K PRIZE</span> | <span class="sign-up-status">Sign-ups Open</span>
+                    </div>
+                    <a href="login.html" class="card-link register-link">REGISTER</a>
+                </div>
+                <div class="card tournament-card upcoming-card">
+                    <img src="images/trophy2.svg" alt="League of Legends" class="game-logo" loading="lazy">
+                    <h3>LoL: Summoner's Cup</h3>
+                    <p class="status">Starts: Nov 5th</p>
+                    <div class="stats">
+                        <span>$50K PRIZE</span> | <span class="sign-up-status">Limited Spots</span>
+                    </div>
+                    <a href="tournaments.html" class="card-link register-link">DETAILS</a>
+                </div>
+                 <div class="card tournament-card upcoming-card">
+                    <img src="images/trophy3.svg" alt="Dota 2" class="game-logo" loading="lazy">
+                    <h3>Dota 2: Aegis Challenge</h3>
+                    <p class="status">Starts: Nov 25th</p>
+                    <div class="stats">
+                        <span>$25K PRIZE</span> | <span class="sign-up-status">Sign-ups Open</span>
+                    </div>
+                    <a href="login.html" class="card-link register-link">REGISTER</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MEX GAMING ARENA. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+:root {
+    /* Define global color variables */
+    --primary-color: #388e3c;
+    /* Green color from example */
+    --secondary-color: #c107f0;
+    /* Red color from example */
+    --accent-color: #fbc02d;
+    /* Yellowish accent */
+    --light-color: #f5f5f5;
+    --dark-color: #333;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+header {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+h1,
+h2 {
+    font-weight: 700;
+    margin: 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.grid-container {
+    display: grid;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.card::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: var(--accent-color);
+    margin-top: 1rem;
+}
+
+.data-card h2,
+.weather-card h2 {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 0.75rem;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.data-list p,
+.weather-info p {
+    margin: 0.5rem 0;
+}
+
+.weather-icon {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.weather-icon img {
+    width: 50px;
+    height: auto;
+}
+
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+a:focus,
+button:focus,
+input:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    background: var(--accent-color);
+    color: #000;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    left: 10px;
+    top: 10px;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+/* --- Media Query for Larger Screens --- */
+@media (min-width: 800px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 799px) {
+    .card {
+        margin-bottom: 1.5rem;
+    }
+}
