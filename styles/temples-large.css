@@ -7,25 +7,30 @@
         margin-right: 2rem;
     }
 
-    .navbar-large {
-        display: flex;
-        gap: 1.5rem;
+    .menu-toggle {
+        display: none;
     }
 
-    .navbar-large a {
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+    }
+
+    .navbar a {
         color: white;
         text-decoration: none;
         font-size: 1.1rem;
         transition: color 0.3s ease;
+        border-bottom: none;
+        padding: 0;
     }
 
-    .navbar-large a:hover {
+    .navbar a:hover {
         color: var(--accent1-color);
-    }
-
-    .menu-toggle,
-    .navbar-mobile {
-        display: none;
     }
 
     main {

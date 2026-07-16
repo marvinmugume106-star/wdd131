@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mobile menu toggle functionality
     const menuToggle = document.querySelector('.menu-toggle');
-    const mobileNav = document.querySelector('.navbar-mobile');
+    const primaryNav = document.querySelector('.navbar');
 
-    if (menuToggle && mobileNav) {
+    if (menuToggle && primaryNav) {
         menuToggle.addEventListener('click', () => {
-            mobileNav.classList.toggle('active');
+            primaryNav.classList.toggle('active');
         });
     }
 });

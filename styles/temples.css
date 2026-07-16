@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 :root {
     --primary-color: #4b0082;
     /* Indigo */
@@ -30,16 +28,12 @@ header {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-}
-
-.navbar-large {
-    display: none;
-    /* Hide large navigation by default */
 }
 
 .menu-toggle {
@@ -64,22 +58,21 @@ header {
     transition: all 0.3s ease;
 }
 
-.navbar-mobile {
+.navbar {
     display: none;
     flex-direction: column;
-    background-color: var(--secondary-color);
-    position: absolute;
-    top: 100%;
-    left: 0;
     width: 100%;
-    z-index: 10;
+    margin-top: 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
 }
 
-.navbar-mobile.active {
+.navbar.active {
     display: flex;
 }
 
-.navbar-mobile a {
+.navbar a {
     color: white;
     text-decoration: none;
     padding: 1rem;
@@ -91,6 +84,9 @@ main {
     flex: 1;
     text-align: center;
     padding: 2rem 1rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 h1,
