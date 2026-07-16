@@ -58,9 +58,12 @@ header {
     transition: all 0.3s ease;
 }
 
-.navbar {
+nav {
     display: flex;
     flex-direction: column;
+}
+
+.navbar {
     width: 100%;
     margin-top: 1rem;
     background-color: var(--secondary-color);
