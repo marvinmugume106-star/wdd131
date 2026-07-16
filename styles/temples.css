@@ -59,7 +59,7 @@ header {
 }
 
 .navbar {
-    display: none;
+    display: flex;
     flex-direction: column;
     width: 100%;
     margin-top: 1rem;
@@ -68,8 +68,8 @@ header {
     overflow: hidden;
 }
 
-.navbar.active {
-    display: flex;
+.navbar:not(.active) {
+    display: none;
 }
 
 .navbar a {
