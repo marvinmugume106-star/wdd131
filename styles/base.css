@@ -87,11 +87,18 @@ nav a:hover::after {
 }
 
 /* ======= MAIN LAYOUT ======= */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
 main.container {
   max-width: 1200px;
   margin: 32px auto 0 auto;
   padding: 0 18px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 28px;
 }
 
