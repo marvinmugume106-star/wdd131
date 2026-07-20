@@ -1,4 +1,1 @@
-/* Only include styles that change for larger screens */
-.grid-container {
-    grid-template-columns: 1fr 1fr;
-}
+/* Large-screen styles are consolidated into place.css. */
