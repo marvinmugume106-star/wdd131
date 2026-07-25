@@ -85,7 +85,8 @@
 
     figure img {
         width: 100%;
-        height: var(--image-height);
+        height: auto;
+        aspect-ratio: 400 / 220;
         object-fit: cover;
         display: block;
     }

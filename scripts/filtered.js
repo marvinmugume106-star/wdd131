@@ -111,7 +111,7 @@ function renderTemples(list) {
                 const loadingAttr = isFirst ? 'eager' : 'lazy';
                 const fetchPriority = isFirst ? 'high' : 'low';
                 figure.innerHTML = `
-            <img src="${t.imageUrl}" alt="${t.templeName}" loading="${loadingAttr}" decoding="async" width="400" height="250" fetchpriority="${fetchPriority}">
+            <img src="${t.imageUrl}" alt="${t.templeName}" loading="${loadingAttr}" decoding="async" width="400" height="220" fetchpriority="${fetchPriority}">
             <figcaption>${t.templeName}</figcaption>
             <div class="temple-meta">
                 <div><strong>Location:</strong> ${t.location}</div>
