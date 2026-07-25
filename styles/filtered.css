@@ -10,6 +10,8 @@
     --heading-font: 'Roboto', sans-serif;
     --paragraph-font: 'Roboto', sans-serif;
     --max-content-width: 1200px;
+    --card-height: 420px;
+    --image-height: 220px;
 }
 
 * {
@@ -51,19 +53,27 @@ header {
     font-weight: 700;
 }
 
-/* Large navbar hidden by default on small screens */
-.navbar-large {
+/* Primary nav container */
+.primary-nav {
+    width: 100%;
+}
+
+/* Large nav hidden by default on small screens */
+.primary-nav .nav-large {
     display: none;
 }
 
 /* Make the filter button bar sticky at the top */
-.navbar-large {
+.primary-nav .nav-large {
     position: sticky;
     top: 0;
     z-index: 100;
     background: var(--primary-color);
     padding: 0.5rem 0;
     box-shadow: 0 2px 8px rgba(76, 0, 130, 0.08);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 /* Mobile menu button */
@@ -94,8 +104,7 @@ header {
     transition: 0.3s;
 }
 
-/* Mobile nav: hidden by default */
-.navbar-mobile {
+.primary-nav .nav-mobile {
     display: none;
     flex-direction: column;
     background: var(--primary-color);
@@ -107,12 +116,12 @@ header {
     z-index: 150;
 }
 
-.navbar-mobile.active {
+.primary-nav .nav-mobile.active {
     display: flex;
 }
 
-.navbar-mobile a,
-.navbar-large a {
+.primary-nav .nav-mobile a,
+.primary-nav .nav-large a {
     color: white;
     text-decoration: none;
     padding: 0.85rem 1rem;
@@ -120,13 +129,13 @@ header {
     text-align: center;
 }
 
-.navbar-mobile a:focus,
-.navbar-large a:focus {
+.primary-nav .nav-mobile a:focus,
+.primary-nav .nav-large a:focus {
     outline: 3px solid rgba(255, 255, 255, 0.25);
     border-radius: 6px;
 }
 
-.navbar-large a {
+.primary-nav .nav-large a {
     display: inline-block;
     padding: 0.25rem 0.5rem;
     margin-left: 0.5rem;
@@ -166,6 +175,7 @@ figure {
     align-items: center;
     width: 100%;
     max-width: 420px;
+    height: var(--card-height);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
     border-radius: 10px;
     overflow: hidden;
@@ -180,7 +190,8 @@ figure:hover {
 
 figure img {
     width: 100%;
-    height: auto;
+    height: var(--image-height);
+    object-fit: cover;
     display: block;
 }
 
@@ -195,6 +206,8 @@ figcaption {
     font-size: 0.875rem;
     color: #333;
     padding: 0 0 0.75rem 0;
+    flex: 1 1 auto;
+    width: 100%;
 }
 
 /* Footer */
@@ -230,7 +243,7 @@ button:focus {
 
 /* Make filter buttons smaller and tidy */
 .filter-btn,
-.navbar-large button {
+.primary-nav .nav-large button {
     background: var(--secondary-color);
     color: #fff;
     border: none;
@@ -247,8 +260,8 @@ button:focus {
 
 .filter-btn:hover,
 .filter-btn:focus,
-.navbar-large button:hover,
-.navbar-large button:focus {
+.primary-nav .nav-large button:hover,
+.primary-nav .nav-large button:focus {
     background: var(--accent1-color);
     color: var(--primary-color);
     transform: translateY(-1px) scale(1.03);
@@ -268,16 +281,16 @@ button:focus {
         display: none !important;
     }
 
-    .navbar-mobile {
+    .primary-nav .nav-mobile {
         display: none !important;
     }
 }
 
 /* These styles are for the buttons. I have added .filter-link to them */
 .filter-btn,
-.navbar-large button,
+.primary-nav .nav-large button,
 .filter-link,
-.navbar-large a {
+.primary-nav .nav-large a {
     background: var(--secondary-color);
     color: #fff;
     border: none;
@@ -298,8 +311,8 @@ button:focus {
 /* Updated this section to include .filter-link */
 .filter-link:hover,
 .filter-link:focus,
-.navbar-large a:hover,
-.navbar-large a:focus {
+.primary-nav .nav-large a:hover,
+.primary-nav .nav-large a:focus {
     background-color: var(--primary-color);
     transform: translateY(-2px);
 }

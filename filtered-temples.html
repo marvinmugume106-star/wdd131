@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Temple album assignment" />
+    <meta name="description" content="Gallery of LDS temples with filtering by age and size; responsive layout with lazy-loaded images and accessible navigation." />
     <meta name="author" content="Marvin Mugume" />
     <title>Temple Album</title>
 
@@ -30,19 +30,21 @@
                 <span class="bar"></span>
             </button>
         </div>
-        <nav class="navbar-large" aria-label="Primary">
-            <a href="#" data-filter="all" class="filter-link">Home</a>
-            <a href="#" data-filter="old" class="filter-link">Old</a>
-            <a href="#" data-filter="new" class="filter-link">New</a>
-            <a href="#" data-filter="large" class="filter-link">Large</a>
-            <a href="#" data-filter="small" class="filter-link">Small</a>
-        </nav>
-        <nav class="navbar-mobile" id="mobile-nav" aria-label="Mobile navigation">
-            <a href="#" data-filter="all" class="filter-link">Home</a>
-            <a href="#" data-filter="old" class="filter-link">Old</a>
-            <a href="#" data-filter="new" class="filter-link">New</a>
-            <a href="#" data-filter="large" class="filter-link">Large</a>
-            <a href="#" data-filter="small" class="filter-link">Small</a>
+        <nav class="primary-nav" aria-label="Primary">
+            <div class="nav-large">
+                <a href="#" data-filter="all" class="filter-link">Home</a>
+                <a href="#" data-filter="old" class="filter-link">Old</a>
+                <a href="#" data-filter="new" class="filter-link">New</a>
+                <a href="#" data-filter="large" class="filter-link">Large</a>
+                <a href="#" data-filter="small" class="filter-link">Small</a>
+            </div>
+            <div class="nav-mobile" id="mobile-nav" aria-label="Mobile navigation">
+                <a href="#" data-filter="all" class="filter-link">Home</a>
+                <a href="#" data-filter="old" class="filter-link">Old</a>
+                <a href="#" data-filter="new" class="filter-link">New</a>
+                <a href="#" data-filter="large" class="filter-link">Large</a>
+                <a href="#" data-filter="small" class="filter-link">Small</a>
+            </div>
         </nav>
     </header>
 
