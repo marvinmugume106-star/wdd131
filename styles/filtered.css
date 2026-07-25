@@ -63,18 +63,7 @@ header {
     display: none;
 }
 
-/* Make the filter button bar sticky at the top */
-.primary-nav .nav-large {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: var(--primary-color);
-    padding: 0.5rem 0;
-    box-shadow: 0 2px 8px rgba(76, 0, 130, 0.08);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
+/* Make the filter button bar sticky at the top on larger screens (see media query) */
 
 /* Mobile menu button */
 .menu-toggle {
@@ -283,6 +272,18 @@ button:focus {
 
     .primary-nav .nav-mobile {
         display: none !important;
+    }
+
+    .primary-nav .nav-large {
+        display: flex;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--primary-color);
+        padding: 0.5rem 0;
+        box-shadow: 0 2px 8px rgba(76, 0, 130, 0.08);
+        flex-wrap: wrap;
+        justify-content: flex-start;
     }
 }
 
