@@ -96,27 +96,31 @@ function getTempleType(temple) {
 const templeGrid = document.getElementById("templeGrid");
 
 function renderTemples(list) {
-    templeGrid.innerHTML = "";
-    if (!list || list.length === 0) {
-        const p = document.createElement('p');
-        p.textContent = 'No temples match that filter.';
-        templeGrid.appendChild(p);
-        return;
-    }
-    list.forEach(t => {
-        const figure = document.createElement("figure");
-        figure.setAttribute("data-type", getTempleType(t));
-        figure.innerHTML = `
-      <img src="${t.imageUrl}" alt="${t.templeName}" loading="lazy">
-      <figcaption>${t.templeName}</figcaption>
-      <div class="temple-meta">
-        <div><strong>Location:</strong> ${t.location}</div>
-        <div><strong>Dedicated:</strong> ${t.dedicated}</div>
-        <div><strong>Area:</strong> ${t.area.toLocaleString()} sq ft</div>
-      </div>
-    `;
-        templeGrid.appendChild(figure);
-    });
+        templeGrid.innerHTML = "";
+        if (!list || list.length === 0) {
+                const p = document.createElement('p');
+                p.textContent = 'No temples match that filter.';
+                templeGrid.appendChild(p);
+                return;
+        }
+        list.forEach((t, i) => {
+                const figure = document.createElement("figure");
+                figure.setAttribute("data-type", getTempleType(t));
+                // Improve LCP by prioritizing the first visible image
+                const isFirst = i === 0;
+                const loadingAttr = isFirst ? 'eager' : 'lazy';
+                const fetchPriority = isFirst ? 'high' : 'low';
+                figure.innerHTML = `
+            <img src="${t.imageUrl}" alt="${t.templeName}" loading="${loadingAttr}" decoding="async" width="400" height="250" fetchpriority="${fetchPriority}">
+            <figcaption>${t.templeName}</figcaption>
+            <div class="temple-meta">
+                <div><strong>Location:</strong> ${t.location}</div>
+                <div><strong>Dedicated:</strong> ${t.dedicated}</div>
+                <div><strong>Area:</strong> ${t.area.toLocaleString()} sq ft</div>
+            </div>
+        `;
+                templeGrid.appendChild(figure);
+        });
 }
 
 // 3ï¸âƒ£ Filter Logic
