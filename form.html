@@ -22,17 +22,18 @@
     </header>
 
     <main>
+        <p class="required-note">* Required fields</p>
         <form method="get" action="review.html">
 
             <fieldset>
-                <label for="productName">Product Name</label>
+                <label for="productName">Product Name <span class="required-indicator">*</span></label>
                 <select id="productName" name="productName" required>
-                    <option value="" disabled selected>Choose a Product ...</option>
+                    <option value="" disabled selected>Select a Product ...</option>
                     </select>
             </fieldset>
 
             <fieldset class="rating-fieldset">
-                <legend>Overall Rating</legend>
+                <legend>Overall Rating <span class="required-indicator">*</span></legend>
                 <div class="rating-options" role="radiogroup" aria-label="Product Overall Rating">
                     <label>
                         <input type="radio" id="rating1" name="overallRating" value="1" required>
@@ -58,7 +59,7 @@
             </fieldset>
 
             <fieldset>
-                <label for="installationDate">Date of Installation</label>
+                <label for="installationDate">Date of Installation <span class="required-indicator">*</span></label>
                 <input type="date" id="installationDate" name="installationDate" required>
             </fieldset>
 

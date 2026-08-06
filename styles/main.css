@@ -87,6 +87,17 @@ textarea {
     font-size: 1rem;
 }
 
+.required-note {
+    margin-bottom: 1rem;
+    color: #5d355b;
+    font-weight: 600;
+}
+
+.required-indicator {
+    color: #d13954;
+    margin-left: 0.25rem;
+}
+
 /* FIX: Strong Focus Indicator for Accessibility */
 input:focus, select:focus, textarea:focus, .submit-button:focus {
     outline: 2px solid #5d355b; 
