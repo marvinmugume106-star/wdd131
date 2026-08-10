@@ -3,12 +3,12 @@
    ==================================== */
 
 :root {
-    --color-dark: #0f0f15;
-    --color-text: #fff;
-    --color-neon-blue: #00e0ff;
-    --color-neon-red: #ff3366;
-    --color-accent-orange: #ff9900;
-    --color-card-bg: #1a1a25;
+    --color-dark: #072E30; /* brand dark (from image) */
+    --color-text: #FFFFFF;
+    --color-neon-blue: #2B6E6F; /* brand teal */
+    --color-neon-red: #FF6B6B;
+    --color-accent-orange: #FFD34E; /* warm yellow accent */
+    --color-card-bg: #0F2A2B;
     --max-width: 1200px;
 }
 

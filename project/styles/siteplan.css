@@ -5,12 +5,12 @@
 
 /* --- Color Variables (Defined in Section 4) --- */
 :root {
-    --color-dark: #0F0F15; /* Primary Background */
+    --color-dark: #072E30; /* Primary Background (brand dark) */
     --color-text: #FFFFFF; /* Text/Base */
-    --color-neon-red: #FF3366; /* Accent Red (Live/Action) */
-    --color-neon-blue: #00E0FF; /* Accent Blue (Neon) */
-    --color-accent-orange: #FF9900; /* Accent Orange (Highlight/Reward) */
-    --color-card-bg: #1a1a25;
+    --color-neon-red: #FF6B6B; /* Accent Red */
+    --color-neon-blue: #2B6E6F; /* Brand teal */
+    --color-accent-orange: #FFD34E; /* Accent yellow */
+    --color-card-bg: #0F2A2B;
 }
 
 /* --- Base Styles (Mobile-First) --- */

@@ -1,9 +1,10 @@
 :root {
-  --blue: #1f4a6e;
-  --blue-dark: #1a2a44;
-  --panel: #f7f7f7;
-  --text: #333;
-  --muted: #777;
+  --brand: #0B5560;
+  --brand-dark: #072E30;
+  --panel: #F7F3ED;
+  --text: #102022;
+  --muted: #586567;
+  --accent-yellow: #FFD34E;
   --shadow: 0 2px 6px rgba(0, 0, 0, .08);
 }
 
@@ -16,14 +17,14 @@
 /* ======= GENERAL ======= */
 body {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  color: #222;
-  background: #f7fafd;
+  color: var(--text);
+  background: var(--panel);
   font-weight: 400;
 }
 
 /* ======= HEADER ======= */
 header .titlebar {
-  background: #1b4f79;
+  background: var(--brand);
   color: #fff;
   padding: 18px 0 10px 0;
   text-align: center;
@@ -41,20 +42,20 @@ header .titlebar span#course-title {
 }
 
 header .titlebar span#course-title .highlight {
-  color: #ffd34e;
+  color: var(--accent-yellow);
   font-weight: 700;
 }
 
 /* ======= NAV ======= */
 nav {
-  background: #2b2f33;
+  background: var(--brand-dark);
   color: #fff;
   display: flex;
   justify-content: center;
   gap: 60px;
   padding: 13px 0 11px 0;
   font-size: 1.1rem;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 
 nav a {
@@ -62,13 +63,13 @@ nav a {
   text-decoration: none;
   position: relative;
   padding: 4px 0;
-  transition: color 0.3s;
+  transition: color 0.2s ease-in-out;
   font-weight: 500;
   letter-spacing: .2px;
 }
 
 nav a:hover {
-  color: #ffd34e;
+  color: var(--accent-yellow);
 }
 
 nav a::after {
@@ -78,7 +79,7 @@ nav a::after {
   bottom: -4px;
   width: 0%;
   height: 2px;
-  background: #ffd34e;
+  background: var(--accent-yellow);
   transition: width 0.3s;
 }
 
@@ -117,7 +118,7 @@ main.container {
 }
 
 .card-header {
-  background: #1f4a6e;
+  background: var(--brand);
   color: #fff;
   padding: 13px 0 13px 0;
   border-radius: 8px 8px 0 0;
@@ -126,7 +127,7 @@ main.container {
   font-size: 1.25rem;
   margin: -22px -22px 18px -22px;
   letter-spacing: .5px;
-  border-bottom: 2px solid #b5c7db;
+  border-bottom: 2px solid rgba(255,255,255,0.06);
 }
 
 /* ======= ABOUT ME CARD ======= */
@@ -197,16 +198,16 @@ main.container {
   gap: 12px;
 }
 
-.card-content img {
-  width: 110px;
-  height: 110px;
-  object-fit: cover;
-  border-radius: 4px;
-  border: 1.5px solid #bbb;
-  margin-bottom: 8px;
+.card-content li a {
+  color: var(--brand-dark);
+  text-decoration: underline;
+  font-size: 1.05rem;
+  transition: color 0.2s;
 }
 
-.card-content ul {
+.card-content li a:hover {
+  color: var(--brand);
+}
   list-style: disc inside;
   padding-left: 0;
   margin: 0;
@@ -229,31 +230,31 @@ main.container {
 /* ======= FOOTER ======= */
 footer {
   margin-top: 30px;
-  background: #1f4a6e;
+  background: var(--brand-dark);
   color: #fff;
   text-align: center;
   padding: 18px 0 8px 0;
   font-size: 1.08rem;
-  border-top: 2px solid #b5c7db;
+  border-top: 2px solid rgba(255,255,255,0.04);
   letter-spacing: .1px;
   position: relative;
 }
 
 footer .year {
-  color: #ffd1e4;
+  color: var(--accent-yellow);
   margin-right: 6px;
   font-weight: 700;
   font-size: 1.1rem;
 }
 
 footer .footer-highlight {
-  color: #ffd34e;
+  color: var(--accent-yellow);
   font-weight: 700;
   margin: 0 4px;
 }
 
 footer p#lastModified {
-  color: #ffd34e;
+  color: var(--accent-yellow);
   font-size: 1.01rem;
   margin-top: 4px;
   margin-bottom: 0;
@@ -279,4 +280,32 @@ footer p#lastModified {
   .card .author-photo {
     margin: 0 auto;
   }
+}
+
+/* Utility: responsive images */
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  background: var(--brand);
+  color: #fff;
+  z-index: 9999;
+  border-radius: 4px;
 }

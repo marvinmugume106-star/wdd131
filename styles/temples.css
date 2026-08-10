@@ -1,11 +1,8 @@
 :root {
-    --primary-color: #4b0082;
-    /* Indigo */
-    --secondary-color: #8a2be2;
-    /* BlueViolet */
-    --accent1-color: #ffc0cb;
-    /* Pink */
-    --accent2-color: #f0f8ff;
+    --primary-color: #2B6E6F; /* brand teal */
+    --secondary-color: #6FB3AF; /* lighter teal */
+    --accent1-color: #FFD34E; /* warm yellow */
+    --accent2-color: #F6F1EA; /* cream */
     /* AliceBlue */
     --heading-font: 'Roboto', sans-serif;
     --paragraph-font: 'Roboto', sans-serif;
