@@ -136,6 +136,11 @@ header {
     color: var(--accent-yellow);
 }
 
+.primary-nav a.active {
+    background: var(--accent-yellow);
+    color: var(--brand-dark);
+}
+
 main {
     flex: 1;
     width: 100%;

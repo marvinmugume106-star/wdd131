@@ -1,6 +1,6 @@
 // Sample projects array (object + array usage)
 const projects = [
-  { id: 'pr-001', name: 'School Kit Distribution', location: 'Lusaka, Zambia', year: 2025, image: 'images/large_hero_image.webp', description: 'Distributed school kits to 420 children.' },
+  { id: 'pr-001', name: 'School Kit Distribution', location: 'Lusaka, Zambia', year: 2025, image: 'images/kim-kits.jpeg', description: 'Distributed school kits to 420 children.' },
   { id: 'pr-002', name: 'Clean Water Initiative', location: 'Kampala, Uganda', year: 2024, image: 'images/clean_water.jpg', description: 'Installed community water filters and training.' },
   { id: 'pr-003', name: 'Healthcare Outreach', location: 'Arusha, Tanzania', year: 2023, image: 'images/mobile_hero_image.webp', description: 'Mobile clinic serving remote villages.' }
 ];
@@ -65,6 +65,16 @@ function setupMobileMenu(){
   });
 }
 
+function setupActiveNavLink(){
+  const currentPage = window.location.pathname.split('/').pop();
+  document.querySelectorAll('.primary-nav a').forEach(link => {
+    const href = link.getAttribute('href');
+    if(href === currentPage || (currentPage === '' && href === 'km-kits.html')){
+      link.classList.add('active');
+    }
+  });
+}
+
 function setupContactFormStorage(){
   const form = document.querySelector('.contact-form');
   if(!form) return;
@@ -104,6 +114,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   }
 
   setupMobileMenu();
+  setupActiveNavLink();
   setupContactFormStorage();
 
   // Footer dates
